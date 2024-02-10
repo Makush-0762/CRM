@@ -18,8 +18,9 @@ export default function MenuItem({
 
     const [isOpen, setIsOpen] = useState(true);
 
-    const handleClick = () => {
+    const handleClick = (event) => {
         onMenuItemClick(id);
+        event.stopPropagation();
         setIsOpen(!isOpen);
     };
     return (

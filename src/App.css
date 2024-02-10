@@ -43,3 +43,9 @@ a {
 ul {
     list-style: none;
 }
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}

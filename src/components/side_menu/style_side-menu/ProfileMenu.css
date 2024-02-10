@@ -1,0 +1,31 @@
+.profileMenu__profile {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    bottom: 0px;
+    background-color: #fff;
+    padding: 5px;
+}
+.profile__body-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 12px;
+}
+.profile__arrow {
+    width: 18px;
+    height: 18px;
+    transform: rotate(90deg);
+    margin-left: auto;
+    cursor: pointer;
+}
+.profile__name {
+    font-weight: 600;
+    color: #000;
+}
+
+.profile__position {
+    font-weight: 400;
+    font-size: 12px;
+    color: #757575;
+}

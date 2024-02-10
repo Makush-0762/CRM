@@ -1,7 +1,7 @@
 .menuItem__item {
     border-radius: 8px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
 }
 .menuItem__link {
     display: flex;

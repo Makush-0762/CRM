@@ -1,3 +1,5 @@
 .menuLists__body {
     margin-top: 65px;
+    max-height: 600px;
+    overflow-y: auto;
 }
