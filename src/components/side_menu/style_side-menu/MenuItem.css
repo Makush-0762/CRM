@@ -1,0 +1,25 @@
+.menuItem__item {
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.menuItem__link {
+    display: flex;
+    align-items: center;
+    padding: 11px;
+}
+.menuItem__link span {
+    margin-left: 14px;
+}
+.menuItem__link img {
+    margin-left: auto;
+    padding: 5px;
+}
+.menuItem__item-active {
+    background-color: #5932ea;
+    color: white;
+}
+
+.menuItem__item:not(:last-child) {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,33 @@
+.sideMenu__body {
+    max-width: 20%;
+    padding: 36px 28px;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    box-shadow: 0px 0px 15px #0000001f;
+}
+
+.arrow {
+    transform: rotate(90deg);
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    border-radius: 8px;
+    background-color: #b2b2b27d;
+}
+.menuItem_body:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.menuItem > p {
+    margin-left: 14px;
+}
+
+.menuItem > img {
+    margin-left: auto;
+}
+.sublist_item {
+    display: block;
+}
