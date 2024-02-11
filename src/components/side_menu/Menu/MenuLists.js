@@ -3,12 +3,13 @@ import '../style_side-menu/MenuLists.css';
 import menuItemsDB from '../menuItemsDB.js';
 import MenuItem from './MenuItem.js';
 
-export default function MenuLists() {
+export default function MenuLists({ setIsOpenDropdown }) {
     const [activeItemId, setActiveItemId] = useState(1); //Стан для контролю активного лінка
 
-    const handleMenuItemClick = (id) => {
+    const handleMenuItemClick = (id, isOpen) => {
         // Ловимо id із дочірнього елементу
         setActiveItemId(id);
+        setIsOpenDropdown(isOpen);
     };
 
     return (
@@ -21,6 +22,7 @@ export default function MenuLists() {
                             {...item}
                             activeItemId={activeItemId} // Передаємо саму id (відбувається перерендеринг)
                             onMenuItemClick={handleMenuItemClick} // Пропсами пердаємо функцію, і ловимо id
+                            setIsOpenDropdown={setIsOpenDropdown}
                         />
                     );
                 })}

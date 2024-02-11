@@ -11,6 +11,7 @@ export default function MenuItem({
     subItems,
     onMenuItemClick,
     activeItemId,
+    // setIsOpenDropdown,
 }) {
     const isActive = id === activeItemId; // Перевіркою перетворюємо id на бульове значення, для оперування класами
 
@@ -19,7 +20,7 @@ export default function MenuItem({
     const [isOpen, setIsOpen] = useState(true);
 
     const handleClick = (event) => {
-        onMenuItemClick(id);
+        onMenuItemClick(id, !isOpen);
         event.stopPropagation();
         setIsOpen(!isOpen);
     };

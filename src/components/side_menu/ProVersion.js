@@ -1,19 +1,18 @@
 import React from 'react';
 import './style_side-menu/ProVersion.css';
 
-export default function ProVersion() {
+export default function ProVersion({ height, isOpenDropdown }) {
+    const adjustedHeight = isOpenDropdown ? height - 200 : height;
+    console.log(isOpenDropdown);
+    console.log(adjustedHeight + '//..'); // Вирахувати висоту залежно від того, чи розкритий дропдаун
     return (
         <>
-            {false ? (
+            {adjustedHeight >= 275 ? (
                 <div className="proVersion__body">
-                    <div className="proVersion__body-full">
-                        <h3 children="proVersion__title">
-                            Upgrade to PRO to get access all Features!
-                        </h3>
-                        <button className="proVersion__button">
-                            Get Pro Now!
-                        </button>
-                    </div>
+                    <h3 children="proVersion__title">
+                        Upgrade to PRO to get access all Features!
+                    </h3>
+                    <button className="proVersion__button">Get Pro Now!</button>
                 </div>
             ) : (
                 <div className="proVersion__body-f">

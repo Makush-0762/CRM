@@ -12,7 +12,7 @@
     margin-bottom: 48px;
 }
 .proVersion__body-f {
-    border-radius: 20px;
+    border-radius: 50%;
     background-image: linear-gradient(110deg, #eaabf0, #4623e9);
     padding: 5px;
     font-family: 'Poppins', sans-serif;
@@ -26,7 +26,6 @@
 }
 .proVersion__body-f:hover {
     transform: scale(1.2);
-    background-image: linear-gradient(110deg, #4623e9, #eaabf0);
 }
 .proVersion__body h3 {
     font-weight: 600;
@@ -35,7 +34,6 @@
     text-align: center;
     width: 182px;
 }
-
 .proVersion__button {
     font-weight: 600;
     font-size: 14px;
@@ -48,9 +46,10 @@
 }
 .proVersion__button-little {
     padding: 12px 8px;
-    color: #4925e9;
+    color: #460074;
     background-color: #fff;
     font-weight: 600;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
 }

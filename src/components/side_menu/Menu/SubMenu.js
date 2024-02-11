@@ -4,7 +4,6 @@ import link from '../../../images/link.svg'
 
 export default function SubMenu({ items }) {
     
-    console.log(items);
     return (
         <ul className="subMenu__menu">
             {items.map((item, index) => (
