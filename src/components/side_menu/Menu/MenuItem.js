@@ -11,11 +11,12 @@ export default function MenuItem({
     subItems,
     onMenuItemClick,
     activeItemId,
+    isOpenSideBar,
     // setIsOpenDropdown,
 }) {
-    const isActive = id === activeItemId; // Перевіркою перетворюємо id на бульове значення, для оперування класами
+    const isActive = id === activeItemId;
 
-    const IconComponent = Object.values(icon)[0]; //Витягуємо коммпонент svg іконки для того, щоб була можливість керувати коьлором
+    const IconComponent = Object.values(icon)[0];
 
     const [isOpen, setIsOpen] = useState(true);
 
@@ -24,31 +25,35 @@ export default function MenuItem({
         event.stopPropagation();
         setIsOpen(!isOpen);
     };
+
     return (
         <li
-            onClick={handleClick} // передаємо id
+            onClick={handleClick}
             className={
-                isActive // оперуэмо класами
+                isActive
                     ? 'menuItem__item menuItem__item-active'
-                    : 'menuItem__item '
+                    : 'menuItem__item'
             }
         >
             <a
                 href="#"
                 className="menuItem__link"
             >
-                <IconComponent fill={isActive ? '#fff' : '#9197B3'} />{' '}
-                {/*Тут во керуєм кольором*/}
-                <span>{title}</span>
-                {subItems && (
-                    <img
-                        onClick={handleClick}
-                        src={isActive ? arrow_active : arrow_default}
-                        alt="arrow"
-                    />
+                <IconComponent fill={isActive ? '#fff' : '#9197B3'} />
+                {isOpenSideBar && (
+                    <>
+                        <span>{title}</span>
+                        {subItems && (
+                            <img
+                                onClick={handleClick}
+                                src={isActive ? arrow_active : arrow_default}
+                                alt="arrow"
+                            />
+                        )}
+                    </>
                 )}
             </a>
-            {subItems && id === activeItemId && isOpen && (
+            {subItems && id === activeItemId && isOpen && isOpenSideBar && (
                 <SubMenu items={subItems} />
             )}
         </li>

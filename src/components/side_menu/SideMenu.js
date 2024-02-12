@@ -8,6 +8,11 @@ import ProfileMenu from './profile-menu/ProfileMenu.js';
 export default function SideMenu() {
     const [hightProVersion, setHightProVersion] = useState(null);
     const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+    const [isOpenSideBar, setIsOpenSideBar] = useState(false);
+
+    function handleOpenSideBar() {
+        setIsOpenSideBar(!isOpenSideBar);
+    }
 
     useEffect(() => {
         const handleResize = () => {
@@ -28,17 +33,29 @@ export default function SideMenu() {
     }, [hightProVersion]);
 
     return (
-        <div className="sideMenu__body">
+        <div
+            className={` sideMenu__body ${
+                isOpenSideBar ? '' : 'sideMenu__body-active'
+            }`}
+        >
             <div className="sideMenu__Menu">
-                <Logo version="v.01" />
-                <MenuLists setIsOpenDropdown={setIsOpenDropdown} />
+                <Logo
+                    version="v.01"
+                    handleOpenSideBar={handleOpenSideBar}
+                    isOpenSideBar={isOpenSideBar}
+                />
+                <MenuLists
+                    setIsOpenDropdown={setIsOpenDropdown}
+                    isOpenSideBar={isOpenSideBar}
+                />
             </div>
             <div className="sideMenu__profile-pro">
                 <ProVersion
                     height={hightProVersion}
                     isOpenDropdown={isOpenDropdown}
+                    isOpenSideBar={isOpenSideBar}
                 />
-                <ProfileMenu />
+                <ProfileMenu isOpenSideBar={isOpenSideBar} />
             </div>
         </div>
     );

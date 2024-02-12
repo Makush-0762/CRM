@@ -3,7 +3,7 @@ import '../style_side-menu/MenuLists.css';
 import menuItemsDB from '../menuItemsDB.js';
 import MenuItem from './MenuItem.js';
 
-export default function MenuLists({ setIsOpenDropdown }) {
+export default function MenuLists({ setIsOpenDropdown, isOpenSideBar }) {
     const [activeItemId, setActiveItemId] = useState(1); //Стан для контролю активного лінка
 
     const handleMenuItemClick = (id, isOpen) => {
@@ -18,6 +18,7 @@ export default function MenuLists({ setIsOpenDropdown }) {
                 {menuItemsDB.map((item, index) => {
                     return (
                         <MenuItem
+                            isOpenSideBar={isOpenSideBar}
                             key={index}
                             {...item}
                             activeItemId={activeItemId} // Передаємо саму id (відбувається перерендеринг)
