@@ -15,8 +15,7 @@
     flex-direction: column;
     justify-content: end;
 }
-.sideMenu__profile-pro:last-child {
-}
+
 .arrow {
     transform: rotate(90deg);
 }

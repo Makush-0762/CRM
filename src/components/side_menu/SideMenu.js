@@ -3,7 +3,7 @@ import Logo from './Logo';
 import './style_side-menu/Side-menu.css';
 import MenuLists from './Menu/MenuLists.js';
 import ProVersion from './ProVersion.js';
-import ProfileMenu from './ProfileMenu.js';
+import ProfileMenu from './profile-menu/ProfileMenu.js';
 
 export default function SideMenu() {
     const [hightProVersion, setHightProVersion] = useState(null);
