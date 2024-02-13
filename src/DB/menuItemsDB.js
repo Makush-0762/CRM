@@ -1,9 +1,9 @@
-import { ReactComponent as KeySquare } from '../../images/key-square.svg';
-import { ReactComponent as ThreeDІquare } from '../../images/3d-square 1.svg';
-import { ReactComponent as UserSquare } from '../../images/user-square 1.svg';
-import { ReactComponent as WalletMoney } from '../../images/wallet-money 2.svg';
-import { ReactComponent as DiscountShape } from '../../images/discount-shape 1.svg';
-import { ReactComponent as MessageQuestion } from '../../images/message-question 1.svg';
+import { ReactComponent as KeySquare } from '../images/key-square.svg';
+import { ReactComponent as ThreeDІquare } from '../images/3d-square 1.svg';
+import { ReactComponent as UserSquare } from '../images/user-square 1.svg';
+import { ReactComponent as WalletMoney } from '../images/wallet-money 2.svg';
+import { ReactComponent as DiscountShape } from '../images/discount-shape 1.svg';
+import { ReactComponent as MessageQuestion } from '../images/message-question 1.svg';
 
 const menuItemsDB = [
     {

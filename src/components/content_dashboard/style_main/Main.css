@@ -1,0 +1,12 @@
+.main__ {
+    padding: 40px 95px 78px 70px;
+    flex: 1 1 auto;
+}
+.top-layer {
+    display: flex;
+    justify-content: space-between;
+}
+.hi__title {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,28 @@
+.statistics__body {
+    background-color: #fff;
+    padding: 32px 50px;
+    box-shadow: 0px 0px 10px #cbcbcb6b;
+    border-radius: 30px;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics__online-body {
+    display: inline-flex;
+}
+.statistic__body-img {
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 26px;
+}
+.statistic__body-img:not(:first-child) {
+    margin-left: -8px;
+}
+.statistic__body-img img {
+    width: 100%;
+    display: block;
+}

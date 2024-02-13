@@ -1,0 +1,55 @@
+.stat__icon {
+    padding: 20px;
+}
+.stat__stroke-icon {
+    display: block;
+    background-color: #d3ffe7;
+    border-radius: 50%;
+    width: 100%;
+}
+.sectionStat__body {
+    display: flex;
+    padding: 0 50px;
+}
+.body__border {
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+}
+.stat__body-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info__title {
+    font-weight: 400;
+    font-size: 14px;
+    color: #acacac;
+}
+.info__count {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    color: #333;
+}
+.inf_arrow,
+.info__percent {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.inf__month {
+    margin-left: 5px;
+}
+.arrow_down {
+    transform: rotate(180deg);
+    top: -5px;
+}
+.perc_color-g {
+    color: #00ac4f;
+    font-weight: 700;
+}
+.perc_color-r {
+    color: #d0004b;
+    font-weight: 700;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style_side-menu/ProfileMenu.css';
 import evano from '../../../images/evano.png';
 import arrow_down from '../../../images/arrow_defoult.png';
-import profileItemDB from '../profileItemDB.js';
+import profileItemDB from '../../../DB/profileItemDB.js';
 import ProfileSubMenu from './ProfileSubMenu.js';
 
 export default function ProfileMenu({ isOpenSideBar }) {

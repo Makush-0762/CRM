@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../style_side-menu/MenuLists.css';
-import menuItemsDB from '../menuItemsDB.js';
+import menuItemsDB from '../../../DB/menuItemsDB.js';
 import MenuItem from './MenuItem.js';
 
 export default function MenuLists({ setIsOpenDropdown, isOpenSideBar }) {

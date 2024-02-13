@@ -1,7 +1,7 @@
-import { ReactComponent as userProfile } from '../../images/Profile icon/user_profile.svg';
-import { ReactComponent as settings } from '../../images/Profile icon/settings.svg';
-import { ReactComponent as message } from '../../images/Profile icon/message.svg';
-import { ReactComponent as exit } from '../../images/Profile icon/exit.svg';
+import { ReactComponent as userProfile } from '../images/Profile icon/user_profile.svg';
+import { ReactComponent as settings } from '../images/Profile icon/settings.svg';
+import { ReactComponent as message } from '../images/Profile icon/message.svg';
+import { ReactComponent as exit } from '../images/Profile icon/exit.svg';
 
 const profileItemDB = [
     {
