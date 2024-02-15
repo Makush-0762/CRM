@@ -7,7 +7,10 @@ export default function ActionCustomers() {
     const [selected, setSelected] = useState('');
     return (
         <div className="actionCustomers">
-            <Search color={'#F9FBFF'} />
+            <Search
+                color={'#F9FBFF'}
+                customClass="search__position"
+            />
             <Filter
                 customClass="filter__position"
                 selected={selected}

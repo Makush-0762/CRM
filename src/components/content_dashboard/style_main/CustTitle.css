@@ -1,0 +1,12 @@
+.cust__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 110%;
+}
+.cust__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: #16c098;
+    margin-top: 10px;
+    line-height: 110%;
+}

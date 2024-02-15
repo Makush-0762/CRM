@@ -4,9 +4,8 @@ import '../../style_main/CustTitle.css';
 export default function CustTitle({ title, subTitle }) {
     return (
         <div className="custTitle__body">
-            <h1 className="cust__title">{title}</h1>
-            <h4 className="cust__subtitle">{subTitle}</h4>
+            <h2 className="cust__title">{title}</h2>
+            <p className="cust__subtitle">{subTitle}</p>
         </div>
     );
 }
-    

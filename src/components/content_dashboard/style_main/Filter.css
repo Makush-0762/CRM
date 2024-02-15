@@ -6,6 +6,7 @@
     user-select: none;
 }
 .filter__position {
+    margin: auto 0;
     margin-left: 16px;
 }
 .filter-btn {

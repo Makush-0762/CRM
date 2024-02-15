@@ -34,3 +34,7 @@
 .search__form:focus-within .search__plaseholder {
     left: 250px;
 }
+.search__position {
+    display: flex;
+    align-items: center;
+}
