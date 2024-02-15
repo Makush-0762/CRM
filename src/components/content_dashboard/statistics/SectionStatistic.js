@@ -10,20 +10,6 @@ export default function SectionStatistic({
     percent,
     activeNow,
 }) {
-    console.log(
-        id +
-            '__' +
-            title +
-            '__' +
-            count +
-            '__' +
-            icon +
-            '__' +
-            percent +
-            '__' +
-            activeNow
-    );
-
     const iconGlob = Object.values(icon)[0];
 
     console.log(activeNow);
@@ -58,7 +44,7 @@ export default function SectionStatistic({
                                     }
                                     class={percent < 15 ? 'arrow_down' : ''}
                                 />{' '}
-                                {percent}
+                                {percent}%
                             </span>
                             <span className="inf__month"> this month</span>
                         </>

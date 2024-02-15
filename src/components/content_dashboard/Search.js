@@ -4,7 +4,7 @@ import './style_main/Search.css';
 
 export default function Search({ color }) {
     const colorInput = {
-        backgroundColor: { color },
+        backgroundColor: color,
     };
     return (
         <form

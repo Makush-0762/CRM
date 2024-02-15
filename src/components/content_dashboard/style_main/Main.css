@@ -10,3 +10,18 @@
     display: flex;
     align-items: center;
 }
+
+.allCust__ {
+    padding: 30px 40px 40px;
+    margin-top: 40px;
+    flex: 1 1 auto;
+    background-color: #fff;
+    border-radius: 30px;
+}
+.allCust__top-layer {
+    display: flex;
+    justify-content: space-between;
+}
+.actionCustomers {
+    display: flex;
+}
