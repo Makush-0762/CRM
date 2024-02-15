@@ -3,6 +3,7 @@
     flex: 1 1 auto;
     overflow-y: auto;
     height: 100vh;
+    position: relative;
 }
 .top-layer {
     display: flex;
@@ -25,4 +26,17 @@
 }
 .actionCustomers {
     display: flex;
+}
+.main__scroll-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    padding: 10px;
+    background-color: #5a32ea5f;
+    border-radius: 50%;
+    z-index: 50;
+}
+.scroll__img {
+    transform: rotate(180deg);
+    width: 60px;
 }

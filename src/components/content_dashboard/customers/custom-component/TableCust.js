@@ -10,6 +10,7 @@ export default function TableCust() {
     const dataLength = 150;
 
     useEffect(() => {
+        //* Звертаємось до сервера
         const fetchData = async () => {
             try {
                 const response = await axios.get(
@@ -42,12 +43,14 @@ export default function TableCust() {
     };
 
     const generatePageNumbers = () => {
+        //* Створюєм пагінацію, логіка по відображенню пагінації
         const totalPages = Math.ceil(dataLength / itemsPerPage);
         const visiblePages = 4;
         const pages = [];
 
         if (currentPage <= visiblePages) {
             for (let i = 1; i <= Math.min(totalPages, visiblePages + 2); i++) {
+                //* якщо знаходишся на 5 сторінці, то буде видно 2 наступні і попередні, прописано тут і
                 pages.push(i);
             }
             if (totalPages > visiblePages + 2) {
@@ -55,6 +58,7 @@ export default function TableCust() {
                 pages.push(totalPages);
             }
         } else if (currentPage >= totalPages - visiblePages + 2) {
+            //* тут
             pages.push(1);
             pages.push('...');
             for (
@@ -96,7 +100,7 @@ export default function TableCust() {
                     <p className="head__item table__item">Status</p>
                 </div>
                 <div className="table__body">
-                    {Array.isArray(data) &&
+                    {Array.isArray(data) && //* виводим все із API
                         data.map((custom, index) => {
                             return (
                                 <div
