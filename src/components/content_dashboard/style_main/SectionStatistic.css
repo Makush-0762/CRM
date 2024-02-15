@@ -6,6 +6,7 @@
     background-color: #d3ffe7;
     border-radius: 50%;
     width: 100%;
+    height: 80px;
 }
 .sectionStat__body {
     display: flex;

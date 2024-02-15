@@ -5,9 +5,10 @@
     width: 306px;
     padding: 36px 28px;
     background-color: rgb(255, 255, 255);
-    min-height: 100vh;
+    height: 100vh;
     box-shadow: 0px 0px 15px #0000001f;
-    position: relative;
+    position: sticky;
+    /* flex-grow: 1; */
 }
 .sideMenu__body-active {
     width: 100px;
