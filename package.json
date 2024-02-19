@@ -15,7 +15,7 @@
     "scripts": {
         "dev": "concurrently \"npm run server\"",
         "start": "concurrently \"react-scripts start\" \"npm run server\"",
-        "build": "concurrently \"react-scripts build\" \"npm run dev\"",
+        "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "server": "json-server -w server/DB.json -p 3001"

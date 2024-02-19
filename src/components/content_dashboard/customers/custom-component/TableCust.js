@@ -14,7 +14,7 @@ export default function TableCust() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:3001/customers?_start=${
+                    `https://api-eta-topaz-11.vercel.app/customers?_start=${
                         (currentPage - 1) * itemsPerPage
                     }&_end=${currentPage * itemsPerPage}`
                 );
