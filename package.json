@@ -13,9 +13,9 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "dev": "concurrently \"npm run server\" \"npm start\"",
+        "dev": "concurrently \"npm run server\"",
         "start": "concurrently \"react-scripts start\" \"npm run server\"",
-        "build": "concurrently \"react-scripts build\" \"npm run server\"",
+        "build": "concurrently \"react-scripts build\" \"npm run dev\"",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "server": "json-server -w server/DB.json -p 3001"
@@ -40,6 +40,7 @@
     },
     "devDependencies": {
         "concurrently": "^8.2.2",
-        "json-server": "^1.0.0-alpha.23"
+        "json-server": "^1.0.0-alpha.23",
+        "serve": "^14.2.1"
     }
 }

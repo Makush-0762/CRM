@@ -91,7 +91,6 @@ export default function TableCust() {
         <div className="TableCust">
             <div className="tableCust__">
                 <div className="table__row-head">
-                    <p className="head__item table__item">id</p>
                     <p className="head__item table__item">Customer Name</p>
                     <p className="head__item table__item">Company</p>
                     <p className="head__item table__item">Phone Number</p>
@@ -107,9 +106,6 @@ export default function TableCust() {
                                     className="table__rows-body"
                                     key={index}
                                 >
-                                    <p className="body__item table__item">
-                                        {custom.id}
-                                    </p>
                                     <p className="body__item table__item">
                                         {custom.name}
                                     </p>
