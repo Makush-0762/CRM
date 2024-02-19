@@ -51,6 +51,28 @@ button {
     cursor: pointer;
 }
 
-#root {
+.layout {
     display: flex;
+}
+
+.otherPage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.otherPage p {
+    text-align: center;
+}
+.greeting {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    line-height: 150%;
+}
+.greeting p {
+    align-items: center;
 }

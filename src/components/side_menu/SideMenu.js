@@ -8,7 +8,7 @@ import ProfileMenu from './profile-menu/ProfileMenu.js';
 export default function SideMenu() {
     const [hightProVersion, setHightProVersion] = useState(null);
     const [isOpenDropdown, setIsOpenDropdown] = useState(false);
-    const [isOpenSideBar, setIsOpenSideBar] = useState(false);
+    const [isOpenSideBar, setIsOpenSideBar] = useState(true);
 
     function handleOpenSideBar() {
         setIsOpenSideBar(!isOpenSideBar);

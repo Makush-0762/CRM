@@ -5,8 +5,9 @@ import Statistics from './statistics/Statistics.js';
 import AllCustomers from './customers/AllCustomers.js';
 import arrow from '../../images/arrow_filter.svg';
 import axios from 'axios';
+import Main from '../../pages/layout/Main.js';
 
-export default function Main() {
+export default function MainCustomers() {
     const [showScrollTop, setShowScrollTop] = useState(false); // Логіка по додаванню scroll to top на певній відстані від найвищої точки
     const [dataLength, setDataLength] = useState(0);
     console.log(dataLength);
@@ -50,10 +51,10 @@ export default function Main() {
     };
 
     return (
-        <div className="main__">
+        <Main classN="main__">
             <TopLayer />
             <Statistics />
-            <AllCustomers dataLength={dataLength}/>
+            <AllCustomers dataLength={dataLength} />
             {showScrollTop && (
                 <button
                     className="main__scroll-to-top"
@@ -66,6 +67,6 @@ export default function Main() {
                     />
                 </button>
             )}
-        </div>
+        </Main>
     );
 }

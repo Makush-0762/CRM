@@ -3,6 +3,7 @@ import SubMenu from './SubMenu.js';
 import '../style_side-menu/MenuItem.css';
 import arrow_default from '../../../images/arrow_defoult.png';
 import arrow_active from '../../../images/arrow_active.png';
+import { NavLink } from 'react-router-dom';
 
 export default function MenuItem({
     id,
@@ -27,35 +28,48 @@ export default function MenuItem({
     };
 
     return (
-        <li
-            onClick={handleClick}
-            className={
-                isActive
-                    ? 'menuItem__item menuItem__item-active'
-                    : 'menuItem__item'
-            }
-        >
-            <a
-                href="#"
-                className="menuItem__link"
+        <>
+            <li
+                onClick={handleClick}
+                className={
+                    isActive
+                        ? 'menuItem__item menuItem__item-active'
+                        : 'menuItem__item'
+                }
             >
-                <IconComponent fill={isActive ? '#fff' : '#9197B3'} />
+                <NavLink
+                    to={`/${title}`}
+                    className="menuItem__link"
+                >
+                    <IconComponent fill={isActive ? '#fff' : '#9197B3'} />
+                    {isOpenSideBar && (
+                        <>
+                            <span>{title}</span>
+                        </>
+                    )}
+                </NavLink>
                 {isOpenSideBar && (
                     <>
-                        <span>{title}</span>
                         {subItems && (
-                            <img
-                                onClick={handleClick}
-                                src={isActive ? arrow_active : arrow_default}
-                                alt="arrow"
-                            />
+                            <span className="menuItem_body-arrov">
+                                <img
+                                    onClick={handleClick}
+                                    src={
+                                        isActive ? arrow_active : arrow_default
+                                    }
+                                    alt="arrow"
+                                />
+                            </span>
                         )}
                     </>
                 )}
-            </a>
+            </li>
             {subItems && id === activeItemId && isOpen && isOpenSideBar && (
-                <SubMenu items={subItems} />
+                <SubMenu
+                    items={subItems}
+                    title={title}
+                />
             )}
-        </li>
+        </>
     );
 }

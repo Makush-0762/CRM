@@ -1,9 +1,9 @@
 import React from 'react';
 import '../style_side-menu/SubMenu.css';
-import link from '../../../images/link.svg'
+import link from '../../../images/link.svg';
+import { NavLink } from 'react-router-dom';
 
-export default function SubMenu({ items }) {
-    
+export default function SubMenu({ items, title }) {
     return (
         <ul className="subMenu__menu">
             {items.map((item, index) => (
@@ -11,7 +11,13 @@ export default function SubMenu({ items }) {
                     key={index}
                     className="subMenu__item"
                 >
-                    <a href="#"><img src={link} alt="icon_SubItem"/>{item}</a>
+                    <NavLink to={`/${title + '/' + item}`}>
+                        <img
+                            src={link}
+                            alt="icon_SubItem"
+                        />
+                        {item}
+                    </NavLink>
                 </li>
             ))}
         </ul>
