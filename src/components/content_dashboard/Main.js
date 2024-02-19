@@ -4,9 +4,27 @@ import TopLayer from './top-layer(serch hi)/TopLayer.js';
 import Statistics from './statistics/Statistics.js';
 import AllCustomers from './customers/AllCustomers.js';
 import arrow from '../../images/arrow_filter.svg';
+import axios from 'axios';
 
 export default function Main() {
     const [showScrollTop, setShowScrollTop] = useState(false); // Логіка по додаванню scroll to top на певній відстані від найвищої точки
+    const [dataLength, setDataLength] = useState(0);
+    console.log(dataLength);
+
+    useEffect(() => {
+        //* Звертаємось до сервера
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    `https://api-eta-topaz-11.vercel.app/customers`
+                );
+                setDataLength(response.data.length);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,10 +53,17 @@ export default function Main() {
         <div className="main__">
             <TopLayer />
             <Statistics />
-            <AllCustomers />
+            <AllCustomers dataLength={dataLength}/>
             {showScrollTop && (
-                <button className="main__scroll-to-top" onClick={scrollToTop}>
-                    <img src={arrow} alt="icon Arrow" className="scroll__img" />
+                <button
+                    className="main__scroll-to-top"
+                    onClick={scrollToTop}
+                >
+                    <img
+                        src={arrow}
+                        alt="icon Arrow"
+                        className="scroll__img"
+                    />
                 </button>
             )}
         </div>

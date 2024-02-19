@@ -32,7 +32,9 @@
 .table__rows-body {
     border-bottom: 1px solid #eee;
 }
-
+.head__item {
+    color: #b5b7c0;
+}
 .item__active {
     display: inline-block;
     border: 1px solid #00b087;

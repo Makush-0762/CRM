@@ -12,7 +12,7 @@ export default function SectionStatistic({
 }) {
     const iconGlob = Object.values(icon)[0];
 
-    console.log(activeNow);
+    // console.log(activeNow);
 
     return (
         <div className={`sectionStat__body ${id === 2 ? 'body__border' : ''}`}>

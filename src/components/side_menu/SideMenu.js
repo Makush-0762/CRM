@@ -20,7 +20,7 @@ export default function SideMenu() {
                 '.sideMenu__profile-pro'
             );
             setHightProVersion(proVersionBlock.offsetHeight);
-            console.log(hightProVersion);
+            // console.log(hightProVersion);
         };
 
         handleResize();

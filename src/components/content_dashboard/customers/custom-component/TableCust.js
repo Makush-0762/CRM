@@ -3,11 +3,13 @@ import '../../style_main/TableCust.css';
 import axios from 'axios';
 import arrow from '../../../../images/arrow_filter.svg';
 
-export default function TableCust() {
+export default function TableCust({dataLength}) {
     const [data, setData] = useState({});
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(8);
-    const dataLength = 150;
+
+
+
 
     useEffect(() => {
         //* Звертаємось до сервера
@@ -19,6 +21,7 @@ export default function TableCust() {
                     }&_end=${currentPage * itemsPerPage}`
                 );
                 setData(response.data);
+                // setDataLength(response.data.length);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

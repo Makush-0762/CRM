@@ -4,7 +4,7 @@ import statistic_DB from '../../../DB/statistics_DB.js';
 import Section from './SectionStatistic.js';
 
 export default function Statistics() {
-    console.log(statistic_DB);
+    // console.log(statistic_DB);
     return (
         <div className="statistics__body">
             {statistic_DB.map((section) => {
