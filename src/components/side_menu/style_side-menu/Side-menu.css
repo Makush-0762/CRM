@@ -8,7 +8,7 @@
     height: 100vh;
     box-shadow: 0px 0px 15px #0000001f;
     position: sticky;
-    /* flex-grow: 1; */
+    flex-grow: 1;
 }
 .sideMenu__body-active {
     width: 100px;

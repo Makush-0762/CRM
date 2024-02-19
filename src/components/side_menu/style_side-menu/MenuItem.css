@@ -15,7 +15,7 @@
 .menuItem__link {
     display: flex;
     align-items: center;
-    padding: 11px;
+    padding: 10px;
 }
 .menuItem__link span {
     margin-left: 14px;
