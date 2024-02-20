@@ -10,57 +10,134 @@ const menuItemsDB = [
         id: 1,
         icon: { KeySquare },
         title: 'Dashboard',
+        path: '/Dashboard',
         subItems: false,
+        isOpen: false,
     },
     {
         id: 2,
         icon: { ThreeDІquare },
         title: 'Product',
+        path: '/Product',
         subItems: [
-            'Product item1',
-            'Product item2',
-            'Product item3',
-            'Product item4',
+            {
+                subTitle: 'Product item1',
+                path: '/Product/Product_item1',
+            },
+            {
+                subTitle: 'Product item2',
+                path: '/Product/Product_item2',
+            },
+            {
+                subTitle: 'Product item3',
+                path: '/Product/Product_item3',
+            },
+            {
+                subTitle: 'Product item4',
+                path: '/Product/Product_item4',
+            },
         ],
+        isOpen: false,
     },
     {
         id: 3,
         icon: { UserSquare },
         title: 'Customers',
+        path: '/Customers',
         subItems: [
-            'Customers item1',
-            'Customers item2',
-            'Customers item3',
-            'Customers item4',
+            {
+                subTitle: 'Customers item1',
+                path: '/Customers/Customers_item1',
+            },
+            {
+                subTitle: 'Customers item2',
+                path: '/Customers/Customers_item2',
+            },
+            {
+                subTitle: 'Customers item3',
+                path: '/Customers/Customers_item3',
+            },
+            {
+                subTitle: 'Customers item4',
+                path: '/Customers/Customers_item4',
+            },
         ],
+        isOpen: false,
     },
     {
         id: 4,
         icon: { WalletMoney },
         title: 'Income',
+        path: '/Income',
         subItems: [
-            'Income item1',
-            'Income item2',
-            'Income item3',
-            'Income item4',
+            {
+                subTitle: 'Income item1',
+                path: '/Income/Income_item1',
+            },
+            {
+                subTitle: 'Income item2',
+                path: '/Income/Income_item2',
+            },
+            {
+                subTitle: 'Income item3',
+                path: '/Income/Income_item3',
+            },
+            {
+                subTitle: 'Income item4',
+                path: '/Income/Income_item4',
+            },
         ],
+        isOpen: false,
     },
     {
         id: 5,
         icon: { DiscountShape },
         title: 'Promote',
+        path: '/Promote',
         subItems: [
-            'Promote item1',
-            'Promote item2',
-            'Promote item3',
-            'Promote item4',
+            {
+                subTitle: 'Promote item1',
+                path: '/Promote/Promote_item1',
+            },
+            {
+                subTitle: 'Promote item2',
+                path: '/Promote/Promote_item2',
+            },
+            {
+                subTitle: 'Promote item3',
+                path: '/Promote/Promote_item3',
+            },
+            {
+                subTitle: 'Promote item4',
+                path: '/Promote/Promote_item4',
+            },
         ],
+        isOpen: false,
     },
     {
         id: 6,
         icon: { MessageQuestion },
         title: 'Help',
-        subItems: ['Help item1', 'Help item2', 'Help item3', 'Help item4'],
+        path: '/Help',
+        subItems: [
+            {
+                subTitle: 'Help item1',
+                path: '/Help/Help_item1',
+            },
+            {
+                subTitle: 'Help item2',
+                path: '/Help/Help_item2',
+            },
+            {
+                subTitle: 'Help item3',
+                path: '/Help/Help_item3',
+            },
+            {
+                subTitle: 'Help item4',
+                path: '/Help/Help_item4',
+            },
+        ],
+        isOpen: false,
     },
 ];
 

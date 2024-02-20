@@ -45,19 +45,19 @@ function App() {
                     element={<Product />}
                 />
                 <Route
-                    path="/product/Product item1"
+                    path="/product/Product_item1"
                     element={<ProductItem1 />}
                 />
                 <Route
-                    path="/product/Product item2"
+                    path="/product/Product_item2"
                     element={<ProductItem2 />}
                 />
                 <Route
-                    path="/product/Product item3"
+                    path="/product/Product_item3"
                     element={<ProductItem3 />}
                 />
                 <Route
-                    path="/product/Product item4"
+                    path="/product/Product_item4"
                     element={<ProductItem4 />}
                 />
                 <Route
@@ -65,19 +65,19 @@ function App() {
                     element={<Customers />}
                 />
                 <Route
-                    path="/customers/Customers item1"
+                    path="/customers/Customers_item1"
                     element={<CustomersItem1 />}
                 />
                 <Route
-                    path="/customers/Customers item2"
+                    path="/customers/Customers_item2"
                     element={<CustomersItem2 />}
                 />
                 <Route
-                    path="/customers/Customers item3"
+                    path="/customers/Customers_item3"
                     element={<CustomersItem3 />}
                 />
                 <Route
-                    path="/customers/Customers item4"
+                    path="/customers/Customers_item4"
                     element={<CustomersItem4 />}
                 />
                 <Route
@@ -85,19 +85,19 @@ function App() {
                     element={<Income />}
                 />
                 <Route
-                    path="/income/Income item1"
+                    path="/income/Income_item1"
                     element={<IncomeItem1 />}
                 />
                 <Route
-                    path="/income/Income item2"
+                    path="/income/Income_item2"
                     element={<IncomeItem2 />}
                 />
                 <Route
-                    path="/income/Income item3"
+                    path="/income/Income_item3"
                     element={<IncomeItem3 />}
                 />
                 <Route
-                    path="/income/Income item4"
+                    path="/income/Income_item4"
                     element={<IncomeItem4 />}
                 />
                 <Route
@@ -105,19 +105,19 @@ function App() {
                     element={<Promote />}
                 />
                 <Route
-                    path="/promote/Promote item1"
+                    path="/promote/Promote_item1"
                     element={<PromoteItem1 />}
                 />
                 <Route
-                    path="/promote/Promote item2"
+                    path="/promote/Promote_item2"
                     element={<PromoteItem2 />}
                 />
                 <Route
-                    path="/promote/Promote item3"
+                    path="/promote/Promote_item3"
                     element={<PromoteItem3 />}
                 />
                 <Route
-                    path="/promote/Promote item4"
+                    path="/promote/Promote_item4"
                     element={<PromoteItem4 />}
                 />
                 <Route
@@ -125,19 +125,19 @@ function App() {
                     element={<Help />}
                 />
                 <Route
-                    path="/help/Help item1"
+                    path="/help/Help_item1"
                     element={<HelpItem1 />}
                 />
                 <Route
-                    path="/help/Help item2"
+                    path="/help/Help_item2"
                     element={<HelpItem2 />}
                 />
                 <Route
-                    path="/help/Help item3"
+                    path="/help/Help_item3"
                     element={<HelpItem3 />}
                 />
                 <Route
-                    path="/help/Help item4"
+                    path="/help/Help_item4"
                     element={<HelpItem4 />}
                 />
             </Routes>

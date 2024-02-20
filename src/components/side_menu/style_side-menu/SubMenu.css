@@ -4,8 +4,10 @@
     justify-content: space-between;
     padding: 10px 10px 10px 20px;
     background-color: #ad97ff;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    /* border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; */
+    border-radius: 8px;
+    margin-top: 5px;
 }
 
 .subMenu__item {
