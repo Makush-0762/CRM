@@ -1,3 +1,7 @@
+# This project on Vercel(https://crm-romans-projects-646ddc22.vercel.app/)
+
+CHECK "CUSTOMERS"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
