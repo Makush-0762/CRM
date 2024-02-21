@@ -15,7 +15,7 @@ export default function Filter({ customClass, selected, setSelected }) {
                 className="filter-btn"
                 onClick={hundleOpenFilter}
             >
-                <span className="filter-label">Short by :</span>{' '}
+                <span className="filter-label">Sort by :</span>{' '}
                 {selected ? selected : 'Newest'}
             </div>
             {filtOpen && (
