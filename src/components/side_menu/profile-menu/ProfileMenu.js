@@ -14,7 +14,10 @@ export default function ProfileMenu({ isOpenSideBar }) {
 
     return (
         <>
-            <div className="profileMenu__profile">
+            <div
+                className="profileMenu__profile"
+                onClick={handleOpenSubProfile}
+            >
                 <div className="profile__body-img">
                     <img
                         src={evano}
@@ -32,25 +35,35 @@ export default function ProfileMenu({ isOpenSideBar }) {
                     <img
                         src={arrow_down}
                         alt="icon Arrow"
-                        className="profile__arrow"
-                        onClick={handleOpenSubProfile}
+                        className={`${
+                            isOpenSubMenu
+                                ? 'profile__arrow-active'
+                                : 'profile__arrow'
+                        }`}
+                        // onClick={handleOpenSubProfile}
                     />
                 )}
             </div>
-            {isOpenSubMenu && isOpenSideBar && (
-                <div className="menuProfile">
-                    <ul className="profile__list">
-                        {profileItemDB.map((LiItem) => {
-                            return (
-                                <ProfileSubMenu
-                                    key={LiItem.id}
-                                    {...LiItem}
-                                />
-                            );
-                        })}
-                    </ul>
-                </div>
-            )}
+            {/* {isOpenSubMenu && isOpenSideBar && ( */}
+            <div
+                className={`${
+                    isOpenSubMenu && isOpenSideBar
+                        ? 'menuProfile-active'
+                        : 'menuProfile'
+                }`}
+            >
+                <ul className="profile__list">
+                    {profileItemDB.map((LiItem) => {
+                        return (
+                            <ProfileSubMenu
+                                key={LiItem.id}
+                                {...LiItem}
+                            />
+                        );
+                    })}
+                </ul>
+            </div>
+            {/* )} */}
         </>
     );
 }

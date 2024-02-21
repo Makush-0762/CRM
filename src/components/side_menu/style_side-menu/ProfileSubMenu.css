@@ -1,3 +1,35 @@
+.menuProfile {
+    position: absolute;
+    bottom: -500px;
+    right: -170px;
+    transition: all 0.3s ease;
+    background-color: #ddd4ff;
+    padding: 15px;
+    box-shadow: 5px 0px 15px #c8c8c844;
+    border-radius: 8px;
+}
+.menuProfile-active {
+    position: absolute;
+    bottom: 0;
+    right: -170px;
+    transition: all 0.3s ease;
+    background-color: #ddd4ff;
+    padding: 15px;
+    /* box-shadow: 10px 0px 15px #a4a4a456; */
+    border-radius: 8px;
+}
+.menuProfile-active::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: #ddd4ff;
+    bottom: 40px;
+    left: -20px;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 15px #a4a4a456;
+    z-index: -1;
+}
 .profile__list-item {
     padding: 10px;
     border-radius: 8px;
