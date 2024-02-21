@@ -10,7 +10,7 @@
 }
 .menuProfile-active {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: -170px;
     transition: all 0.3s ease;
     background-color: #ddd4ff;
@@ -24,7 +24,7 @@
     width: 45px;
     height: 45px;
     background-color: #ddd4ff;
-    bottom: 40px;
+    bottom: 30px;
     left: -20px;
     transform: rotate(45deg);
     box-shadow: 0px 0px 15px #a4a4a456;

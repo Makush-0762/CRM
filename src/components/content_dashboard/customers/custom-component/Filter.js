@@ -8,7 +8,14 @@ export default function Filter({ customClass, selected, setSelected }) {
         setFiltOpen(!filtOpen);
     }
 
-    const optionFilt = ['Alphabet name', 'Status', 'Newest', 'The oldest'];
+    const optionFilt = [
+        'Name',
+        'Status',
+        'Newest',
+        'Oldest',
+        'Country',
+        'Company',
+    ];
     return (
         <div className={`filter ${customClass}`}>
             <div

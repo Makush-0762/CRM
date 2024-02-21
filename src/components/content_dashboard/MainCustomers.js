@@ -9,23 +9,23 @@ import Main from '../../pages/layout/Main.js';
 
 export default function MainCustomers() {
     const [showScrollTop, setShowScrollTop] = useState(false); // Логіка по додаванню scroll to top на певній відстані від найвищої точки
-    const [dataLength, setDataLength] = useState(0);
-    console.log(dataLength);
+    // const [dataLength, setDataLength] = useState(0);
+    // console.log(dataLength);
 
-    useEffect(() => {
-        //* Звертаємось до сервера
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(
-                    `https://api-eta-topaz-11.vercel.app/customers`
-                );
-                setDataLength(response.data.length);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     //* Звертаємось до сервера
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axios.get(
+    //                 `https://api-eta-topaz-11.vercel.app/customers`
+    //             );
+    //             setDataLength(response.data.length);
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
+    //     fetchData();
+    // }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,7 +54,7 @@ export default function MainCustomers() {
         <Main classN="main__">
             <TopLayer />
             <Statistics />
-            <AllCustomers dataLength={dataLength} />
+            <AllCustomers  />
             {showScrollTop && (
                 <button
                     className="main__scroll-to-top"

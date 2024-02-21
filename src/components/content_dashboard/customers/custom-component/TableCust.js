@@ -3,31 +3,31 @@ import '../../style_main/TableCust.css';
 import axios from 'axios';
 import arrow from '../../../../images/arrow_filter.svg';
 
-export default function TableCust({dataLength}) {
-    const [data, setData] = useState({});
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(8);
+export default function TableCust({searchResults, dataLength,   currentPage,
+    setCurrentPage,
+    itemsPerPage,
+    setItemsPerPage,}) {
+    // const [data, setData] = useState({});
 
 
-
-
-    useEffect(() => {
-        //* Звертаємось до сервера
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(
-                    `https://api-eta-topaz-11.vercel.app/customers?_start=${
-                        (currentPage - 1) * itemsPerPage
-                    }&_end=${currentPage * itemsPerPage}`
-                );
-                setData(response.data);
-                // setDataLength(response.data.length);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-        fetchData();
-    }, [currentPage, itemsPerPage]);
+    // useEffect(() => {
+    //     //* Звертаємось до сервера
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await axios.get(
+    //                 `https://api-eta-topaz-11.vercel.app/customers?_start=${
+    //                     (currentPage - 1) * itemsPerPage
+    //                 }&_end=${currentPage * itemsPerPage}`
+    //                 `https://api-eta-topaz-11.vercel.app/customers`
+    //             );
+    //             setData(response.data);
+    //             setDataLength(response.data.length);
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
+    //     fetchData();
+    // }, [currentPage, itemsPerPage]);
 
     const handlePrevPage = () => {
         if (currentPage > 1) {
@@ -102,8 +102,8 @@ export default function TableCust({dataLength}) {
                     <p className="head__item table__item">Status</p>
                 </div>
                 <div className="table__body">
-                    {Array.isArray(data) && //* виводим все із API
-                        data.map((custom, index) => {
+                    {Array.isArray(searchResults) && //* виводим все із API
+                        searchResults.map((custom, index) => {
                             return (
                                 <div
                                     className="table__rows-body"

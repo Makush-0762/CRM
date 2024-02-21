@@ -55,8 +55,8 @@ export default function SideMenu() {
                     isOpenDropdown={isOpenDropdown}
                     isOpenSideBar={isOpenSideBar}
                 />
-                <ProfileMenu isOpenSideBar={isOpenSideBar} />
             </div>
+            <ProfileMenu isOpenSideBar={isOpenSideBar} />
         </div>
     );
 }

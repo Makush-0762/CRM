@@ -2,7 +2,7 @@ import React from 'react';
 import search from '../../images/search.svg';
 import './style_main/Search.css';
 
-export default function Search({ color, customClass }) {
+export default function Search({ color, customClass, id, onInput }) {
     const colorInput = {
         backgroundColor: color,
     };
@@ -20,8 +20,10 @@ export default function Search({ color, customClass }) {
                 <input
                     type="text"
                     className="search__input"
+                    id={id}
                     // placeholder="Search"
                     style={colorInput}
+                    onInput={onInput}
                 />
                 <span className="search__plaseholder">Search</span>
             </form>
@@ -30,4 +32,5 @@ export default function Search({ color, customClass }) {
 }
 Search.defaultProps = {
     color: '#fff',
+    id: 'search_input',
 };
