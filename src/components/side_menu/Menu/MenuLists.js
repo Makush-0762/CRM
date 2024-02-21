@@ -16,6 +16,7 @@ export default function MenuLists({ setIsOpenDropdown, isOpenSideBar }) {
                             key={index}
                             {...item}
                             location={location.pathname}
+                            isOpenSideBar={isOpenSideBar}
                         />
                     );
                 })}

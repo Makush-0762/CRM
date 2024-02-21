@@ -1,37 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../style_side-menu/SubMenu.css';
 import link from '../../../images/link.svg';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function SubMenu({
-    subTitle,
-    path,
-    isActive,
-    setChildSubItem,
-    childSubItem,
-}) {
-    const location = useLocation();
-
-    function handleOpenedDrop() {
-        if (location.pathname != path) {
-            setChildSubItem(!childSubItem);
-        }
-    }
-
+export default function SubMenu({ subTitle, path, isOpenSideBar }) {
     return (
-        <>
-            <li
-                className={`subMenu__item ${childSubItem ? 'active' : ''}`}
-                onLoad={handleOpenedDrop}
+        <li className="subMenu__item">
+            <NavLink
+                to={path}
+                className={({ isActive }) =>
+                    isActive ? 'subMenu__link subItem-active' : 'subMenu__link'
+                }
             >
-                <Link to={path}>
-                    <img
-                        src={link}
-                        alt="icon_SubItem"
-                    />
-                    {subTitle}
-                </Link>
-            </li>
-        </>
+                <img
+                    src={link}
+                    alt="icon_SubItem"
+                    title={subTitle}
+                />
+                {isOpenSideBar && subTitle}
+            </NavLink>
+        </li>
     );
 }

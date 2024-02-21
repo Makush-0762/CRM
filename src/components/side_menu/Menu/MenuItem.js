@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SubMenu from './SubMenu.js';
 import '../style_side-menu/MenuItem.css';
 import arrow_default from '../../../images/arrow_defoult.png';
 import arrow_active from '../../../images/arrow_active.png';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 export default function MenuItem({
     id,
@@ -11,71 +11,50 @@ export default function MenuItem({
     title,
     path,
     subItems,
-    location,
     isOpen,
+    isOpenSideBar,
 }) {
-    const [isActive, setIsActve] = useState(isOpen);
+    const location = useLocation();
+    const [isActive, setIsActive] = useState(isOpen);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    const [closeDrop, setCloseDrop] = useState(false);
-
-    const [childSubItem, setChildSubItem] = useState(false);
-
-    function handleClose() {
-        setCloseDrop(!closeDrop);
-    }
-
-    function isActiveItem() {
-        if (location == path) {
-            setIsActve(!isOpen);
-            setCloseDrop(true);
-        }
-    }
-    // console.log(isActive);
+    useEffect(() => {
+        setIsActive(location.pathname === path);
+        setIsDropdownOpen(location.pathname.startsWith(path));
+    }, [location.pathname, path]);
 
     const IconComponent = Object.values(icon)[0];
-    // console.log(path);
-    // console.log('__ ' + location);
-    return (
-        <>
-            <li className="menuItem__item">
-                <Link
-                    to={path}
-                    className={`menuItem__link ${isActive ? 'active' : ''}`}
-                    onClick={isActiveItem}
-                >
-                    <IconComponent fill={`${isActive ? '#fff' : '#9197B3'}`} />
-                    <>
-                        <span className="menuItem__title">{title}</span>
-                    </>
-                </Link>
-                {subItems && (
-                    <img
-                        onLoad={isActiveItem}
-                        onClick={handleClose}
-                        className="menuItem__arrov"
-                        src={isActive ? arrow_active : arrow_default}
-                        alt="arrow"
-                    />
-                )}
 
-                {subItems && closeDrop && (
-                    <ul className="subMenu__menu">
-                        {subItems.map((item, index) => {
-                            return (
-                                <SubMenu
-                                    key={index}
-                                    {...item}
-                                    location={location}
-                                    isActive={isActive}
-                                    setChildSubItem={setChildSubItem}
-                                    setOpenDropDown={handleClose}
-                                    childSubItem={childSubItem}
-                                />
-                            );
-                        })}
-                    </ul>
+    return (
+        <li className="menuItem__item">
+            <NavLink
+                to={path}
+                className={`menuItem__link ${isActive ? 'active' : ''}`}
+            >
+                <IconComponent fill={isActive ? '#fff' : '#9197B3'} />
+                {isOpenSideBar && (
+                    <span className="menuItem__title">{title}</span>
                 )}
-            </li>
-        </>
+            </NavLink>
+            {isOpenSideBar && subItems && (
+                <img
+                    className="menuItem__arrov"
+                    src={isActive ? arrow_active : arrow_default}
+                    alt="arrow"
+                />
+            )}
+
+            {subItems && isDropdownOpen && (
+                <ul className={`${isOpenSideBar ? 'subMenu__menu' : 'subMenu__menu-little'}  `}>
+                    {subItems.map((item, index) => (
+                        <SubMenu
+                            key={index}
+                            {...item}
+                            isOpenSideBar={isOpenSideBar}
+                        />
+                    ))}
+                </ul>
+            )}
+        </li>
     );
 }

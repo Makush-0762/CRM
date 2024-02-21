@@ -9,6 +9,7 @@
     box-shadow: 0px 0px 15px #0000001f;
     position: sticky;
     flex-grow: 1;
+    /* overflow-y: auto; */
 }
 .sideMenu__body-active {
     width: 100px;
